@@ -4,6 +4,7 @@ from pathlib import Path
 
 
 import os
+import django
 import django_heroku
 import dj_database_url
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -16,7 +17,7 @@ SECRET_KEY = 'django-insecure-$*9sw+u@_u93&-rg1fx_7m%y&u__^-)*e#tb--ndwgyn7#pxf-
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['labtechnico001.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -128,3 +129,4 @@ MEDIA_ROOT=MEDIA_DIR
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+django_heroku.settings(locals())
